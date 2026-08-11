@@ -1,4 +1,4 @@
-# Objective 1, Requirement 2 — Research code vs production code
+# Research code vs production code
 
 The same component, `map_features()`, before and after refactoring. This is a
 real diff from this repository, not an illustrative example: the "before" is

@@ -1,5 +1,3 @@
-# Objective 2, Requirement 9
-
 ## Part A — Testing and experimentation in production
 
 Offline metrics are computed on a held-out slice of historical data. They tell
