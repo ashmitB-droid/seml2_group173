@@ -1,0 +1,8 @@
+-r requirements.txt
+
+# QA tooling (Assignment II) - not needed at runtime
+pytest
+black
+flake8
+isort
+httpx

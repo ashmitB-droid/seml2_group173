@@ -1,0 +1,9 @@
+=== flake8 (AFTER) ===
+Total issues: 0
+
+=== black --check (AFTER) ===
+All done! ✨ 🍰 ✨
+21 files would be left unchanged.
+
+=== isort --check-only (AFTER) ===
+All imports correctly sorted.

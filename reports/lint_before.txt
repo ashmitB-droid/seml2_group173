@@ -1,0 +1,125 @@
+=== flake8 (BEFORE) ===
+api/main.py:6:100: E501 line too long (141 > 99 characters)
+api/main.py:10:27: W292 no newline at end of file
+api/routes.py:13:1: E302 expected 2 blank lines, found 1
+api/routes.py:15:100: E501 line too long (120 > 99 characters)
+api/routes.py:15:110: E231 missing whitespace after ':'
+api/routes.py:17:1: E302 expected 2 blank lines, found 1
+api/routes.py:19:100: E501 line too long (119 > 99 characters)
+api/routes.py:21:1: E302 expected 2 blank lines, found 1
+api/routes.py:26:1: E302 expected 2 blank lines, found 1
+api/routes.py:26:14: E201 whitespace after '('
+api/routes.py:33:1: E302 expected 2 blank lines, found 1
+api/schemas.py:3:1: E302 expected 2 blank lines, found 1
+api/schemas.py:20:15: W292 no newline at end of file
+src/config.py:59:2: W291 trailing whitespace
+src/config.py:131:2: W292 no newline at end of file
+src/featureEngineering.py:20:52: E225 missing whitespace around operator
+src/featureEngineering.py:26:1: E302 expected 2 blank lines, found 1
+src/featureEngineering.py:38:1: E302 expected 2 blank lines, found 1
+src/featureEngineering.py:51:1: E302 expected 2 blank lines, found 1
+src/featureEngineering.py:63:1: E302 expected 2 blank lines, found 1
+src/featureEngineering.py:75:1: E302 expected 2 blank lines, found 1
+src/featureEngineering.py:90:1: E302 expected 2 blank lines, found 1
+src/featureEngineering.py:102:14: E231 missing whitespace after ':'
+src/featureEngineering.py:103:17: E231 missing whitespace after ':'
+src/featureEngineering.py:104:15: E231 missing whitespace after ':'
+src/featureEngineering.py:105:20: E231 missing whitespace after ':'
+src/featureEngineering.py:117:1: E302 expected 2 blank lines, found 1
+src/featureEngineering.py:121:29: E201 whitespace after '('
+src/featureEngineering.py:127:1: E302 expected 2 blank lines, found 1
+src/featureEngineering.py:128:30: E201 whitespace after '('
+src/featureEngineering.py:134:1: E302 expected 2 blank lines, found 1
+src/featureEngineering.py:142:1: E302 expected 2 blank lines, found 1
+src/featureEngineering.py:149:1: E302 expected 2 blank lines, found 1
+src/featureEngineering.py:165:1: E305 expected 2 blank lines after class or function definition, found 1
+src/featureEngineering.py:171:27: W292 no newline at end of file
+src/feature_engineering.py:10:1: E302 expected 2 blank lines, found 1
+src/feature_engineering.py:21:1: E302 expected 2 blank lines, found 1
+src/feature_engineering.py:30:1: E302 expected 2 blank lines, found 1
+src/feature_engineering.py:39:1: E302 expected 2 blank lines, found 1
+src/feature_engineering.py:52:1: E305 expected 2 blank lines after class or function definition, found 1
+src/feature_engineering.py:53:1: E302 expected 2 blank lines, found 0
+src/feature_engineering.py:62:1: E302 expected 2 blank lines, found 1
+src/feature_engineering.py:72:1: E302 expected 2 blank lines, found 1
+src/feature_engineering.py:82:1: E302 expected 2 blank lines, found 1
+src/feature_engineering.py:92:1: E302 expected 2 blank lines, found 1
+src/feature_engineering.py:102:1: E302 expected 2 blank lines, found 1
+src/feature_engineering.py:112:1: E302 expected 2 blank lines, found 1
+src/feature_engineering.py:123:14: W292 no newline at end of file
+src/predict.py:19:1: E302 expected 2 blank lines, found 0
+src/predict.py:26:5: E301 expected 1 blank line, found 0
+src/predict.py:35:5: E301 expected 1 blank line, found 0
+src/predict.py:65:1: E305 expected 2 blank lines after class or function definition, found 1
+src/predict.py:80:22: W292 no newline at end of file
+src/preprocessing.py:8:1: F401 'pathlib.Path' imported but unused
+src/preprocessing.py:19:1: E302 expected 2 blank lines, found 1
+src/preprocessing.py:28:1: E302 expected 2 blank lines, found 1
+src/preprocessing.py:38:1: E302 expected 2 blank lines, found 1
+src/preprocessing.py:48:1: E302 expected 2 blank lines, found 1
+src/preprocessing.py:56:1: E302 expected 2 blank lines, found 1
+src/preprocessing.py:78:1: E302 expected 2 blank lines, found 1
+src/preprocessing.py:81:17: E231 missing whitespace after ','
+src/preprocessing.py:81:20: E231 missing whitespace after ','
+src/preprocessing.py:81:23: E231 missing whitespace after ','
+src/preprocessing.py:81:26: E231 missing whitespace after ','
+src/preprocessing.py:81:29: E231 missing whitespace after ','
+src/preprocessing.py:81:32: E231 missing whitespace after ','
+src/preprocessing.py:108:1: E302 expected 2 blank lines, found 1
+src/preprocessing.py:120:1: E302 expected 2 blank lines, found 1
+src/preprocessing.py:135:1: E302 expected 2 blank lines, found 1
+src/preprocessing.py:146:1: E302 expected 2 blank lines, found 1
+src/preprocessing.py:156:1: E305 expected 2 blank lines after class or function definition, found 1
+src/preprocessing.py:163:24: W292 no newline at end of file
+src/train.py:32:1: E302 expected 2 blank lines, found 0
+src/train.py:71:15: E201 whitespace after '('
+src/train.py:77:5: E265 block comment should start with '# '
+src/train.py:80:1: W293 blank line contains whitespace
+src/train.py:112:9: E122 continuation line missing indentation or outdented
+src/train.py:113:9: E122 continuation line missing indentation or outdented
+src/train.py:114:5: E122 continuation line missing indentation or outdented
+src/train.py:125:1: E305 expected 2 blank lines after class or function definition, found 1
+src/train.py:126:12: W292 no newline at end of file
+streamlit/Home.py:12:1: E122 continuation line missing indentation or outdented
+streamlit/Home.py:22:2: W292 no newline at end of file
+streamlit/config.py:21:51: W292 no newline at end of file
+streamlit/pages/Prediction.py:3:1: F401 'pathlib.Path' imported but unused
+streamlit/pages/Prediction.py:6:67: E231 missing whitespace after ','
+streamlit/pages/Prediction.py:24:9: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:25:9: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:26:9: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:27:9: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:28:9: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:29:9: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:30:9: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:31:9: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:32:9: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:33:9: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:34:9: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:35:5: E122 continuation line missing indentation or outdented
+streamlit/pages/Prediction.py:55:1: W293 blank line contains whitespace
+streamlit/pages/Prediction.py:72:37: W291 trailing whitespace
+streamlit/pages/Prediction.py:75:29: W292 no newline at end of file
+streamlit/pages/metrics.py:52:11: E201 whitespace after '('
+streamlit/pages/metrics.py:53:11: E201 whitespace after '('
+streamlit/pages/metrics.py:54:11: E201 whitespace after '('
+streamlit/pages/metrics.py:57:11: E201 whitespace after '('
+streamlit/pages/metrics.py:58:11: E201 whitespace after '('
+streamlit/pages/metrics.py:119:2: W292 no newline at end of file
+
+Total issues: 107
+
+=== issue counts by code ===
+     40 E302
+     16 E122
+     12 W292
+     12 E231
+      9 E201
+      5 E305
+      3 E501
+      2 W293
+      2 W291
+      2 F401
+      2 E301
+      1 E265
+      1 E225

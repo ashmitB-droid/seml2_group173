@@ -1,20 +1,16 @@
-import requests
-import streamlit as st
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import requests
 from sklearn.metrics import ConfusionMatrixDisplay
-from config import METRICS_URL
 
+import streamlit as st
+from config import METRICS_URL
 
 # -------------------------------------------------------
 # Configuration
 # -------------------------------------------------------
-st.set_page_config(
-    page_title="Model Metrics",
-    page_icon="📊",
-    layout="wide"
-)
+st.set_page_config(page_title="Model Metrics", page_icon="📊", layout="wide")
 st.title("📊 Model Performance Dashboard")
 st.markdown("---")
 
@@ -49,13 +45,13 @@ st.markdown("---")
 # -------------------------------------------------------
 st.subheader("📈 Performance Metrics")
 c1, c2, c3 = st.columns(3)
-c1.metric( "Accuracy", f"{metrics['accuracy']:.4f}")
-c2.metric( "Precision", f"{metrics['precision']:.4f}")
-c3.metric( "Recall", f"{metrics['recall']:.4f}")
+c1.metric("Accuracy", f"{metrics['accuracy']:.4f}")
+c2.metric("Precision", f"{metrics['precision']:.4f}")
+c3.metric("Recall", f"{metrics['recall']:.4f}")
 
 c4, c5, c6 = st.columns(3)
-c4.metric( "F1 Score", f"{metrics['f1_score']:.4f}")
-c5.metric( "ROC AUC", f"{metrics['roc_auc']:.4f}")
+c4.metric("F1 Score", f"{metrics['f1_score']:.4f}")
+c5.metric("ROC AUC", f"{metrics['roc_auc']:.4f}")
 st.markdown("---")
 
 # -------------------------------------------------------
@@ -64,10 +60,7 @@ st.markdown("---")
 st.subheader("📊 Confusion Matrix")
 cm = np.array(metrics["confusion_matrix"])
 fig, ax = plt.subplots(figsize=(5, 5))
-disp = ConfusionMatrixDisplay(
-    confusion_matrix=cm,
-    display_labels=["Not Interested", "Interested"]
-)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["Not Interested", "Interested"])
 disp.plot(ax=ax, cmap="Blues", colorbar=False, values_format="d")
 ax.set_title("Confusion Matrix", fontsize=12)
 plt.tight_layout(pad=0.5)
@@ -78,16 +71,8 @@ st.markdown("---")
 # Feature List
 # -------------------------------------------------------
 st.subheader("🧠 Features Used for Training")
-feature_df = pd.DataFrame(
-    {
-        "Feature Name": metrics["features"]
-    }
-)
-st.dataframe(
-    feature_df,
-    use_container_width=True,
-    hide_index=True
-)
+feature_df = pd.DataFrame({"Feature Name": metrics["features"]})
+st.dataframe(feature_df, use_container_width=True, hide_index=True)
 st.markdown("---")
 
 # -------------------------------------------------------
@@ -96,24 +81,14 @@ st.markdown("---")
 st.subheader("📋 Summary")
 summary = pd.DataFrame(
     {
-        "Metric": [
-            "Accuracy",
-            "Precision",
-            "Recall",
-            "F1 Score",
-            "ROC AUC"
-        ],
+        "Metric": ["Accuracy", "Precision", "Recall", "F1 Score", "ROC AUC"],
         "Value": [
             metrics["accuracy"],
             metrics["precision"],
             metrics["recall"],
             metrics["f1_score"],
-            metrics["roc_auc"]
-        ]
+            metrics["roc_auc"],
+        ],
     }
 )
-st.dataframe(
-    summary,
-    use_container_width=True,
-    hide_index=True
-)
+st.dataframe(summary, use_container_width=True, hide_index=True)

@@ -1,45 +1,44 @@
 {
-    "model": "XGBoost",
-    "dataset": "Health Insurance Cross Sell",
-    "train_samples": 342998,
-    "test_samples": 38111,
-    "features": [
-        "Gender",
-        "Age",
-        "Driving_License",
-        "Region_Code",
-        "Previously_Insured",
-        "Vehicle_Age",
-        "Vehicle_Damage",
-        "Annual_Premium",
-        "Policy_Sales_Channel",
-        "Vintage",
-        "Age_Group",
-        "Premium_Per_Age",
-        "Vintage_Years",
-        "Log_Premium",
-        "Young_Driver",
-        "Senior_Citizen",
-        "High_Premium",
-        "Damage_Not_Insured",
-        "Age_VehicleAge",
-        "Premium_Vintage",
-        "License_Insured",
-        "Age_Premium"
+  "threshold": 0.4,
+  "accuracy": 0.734040040933064,
+  "precision": 0.30102672394961044,
+  "recall": 0.8850353243416827,
+  "f1_score": 0.4492501630080417,
+  "roc_auc": 0.8592979632805082,
+  "confusion_matrix": [
+    [
+      23841,
+      9599
     ],
-    "accuracy": 0.7346435412348141,
-    "precision": 0.30121274108708357,
-    "recall": 0.8826803682295011,
-    "f1_score": 0.4491530039762514,
-    "roc_auc": 0.8593383894722502,
-    "confusion_matrix": [
-        [
-            23875,
-            9565
-        ],
-        [
-            548,
-            4123
-        ]
+    [
+      537,
+      4134
     ]
+  ],
+  "model": "XGBoost",
+  "dataset": "Health Insurance Cross Sell",
+  "features": [
+    "Gender",
+    "Age",
+    "Driving_License",
+    "Region_Code",
+    "Previously_Insured",
+    "Vehicle_Age",
+    "Vehicle_Damage",
+    "Annual_Premium",
+    "Policy_Sales_Channel",
+    "Vintage",
+    "Age_Group",
+    "Premium_Per_Age",
+    "Vintage_Years",
+    "Log_Premium",
+    "Young_Driver",
+    "Senior_Citizen",
+    "High_Premium",
+    "Damage_Not_Insured",
+    "Age_VehicleAge",
+    "Premium_Vintage",
+    "License_Insured",
+    "Age_Premium"
+  ]
 }
