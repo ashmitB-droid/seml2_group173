@@ -226,8 +226,8 @@ Test: `test_metrics_payload_satisfies_dashboard_contract`.
 
 | Component | Platform | URL |
 |---|---|---|
-| FastAPI | Render | https://health-insurance-cross-sell-prediction.onrender.com/docs |
-| Streamlit | Streamlit Cloud | https://health-insurance-cross-sell-prediction.streamlit.app/ |
+| FastAPI | Render | LOL |
+| Streamlit | Streamlit Cloud | LOL |
 
 The Streamlit app calls the deployed API rather than importing `src/` directly,
 so the API must be redeployed before the dashboard reflects code changes.
@@ -245,7 +245,7 @@ Group No: 173
 
 | Sl. No | BITS ID | Name | Contribution | % |
 |---|---|---|---|---|
-| 1 | 2025AA05957 | Abhishek | | |
-| 2 | 2025AA05729 | Ashmit Bhandari | | |
-| 3 | 2025AA05478 | Rishabh Jain | | |
-| 4 | 2025AB05319 | Udit Sharma | | |
+| 1 | 2025AA05957 | Abhishek | | 100 |
+| 2 | 2025AA05729 | Ashmit Bhandari | | 100 |
+| 3 | 2025AA05478 | Rishabh Jain | | 100 |
+| 4 | 2025AB05319 | Udit Sharma | | 100 |
