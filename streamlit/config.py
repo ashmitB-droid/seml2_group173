@@ -14,7 +14,7 @@ TEST_DATA_PATH = DATA_DIR / "test.csv"
 # ==========================================================
 # API ENDPOINT SETTINGS
 # ==========================================================
-BASE_URL = "https://health-insurance-cross-sell-prediction.onrender.com"
+BASE_URL = "https://seml2-group173.onrender.com"
 METRICS_URL = BASE_URL + "/metrics"
 SINGLE_PREDICTION_URL = BASE_URL + "/predict"
 BATCH_PREDICTION_URL = BASE_URL + "/batch-predict"
