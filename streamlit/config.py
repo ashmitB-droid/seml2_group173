@@ -4,7 +4,6 @@ from pathlib import Path
 # PROJECT ROOT
 # ==========================================================
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-print(f"Project Root: {PROJECT_ROOT}")
 
 # ==========================================================
 # DATA PATHS
