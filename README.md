@@ -226,8 +226,9 @@ Test: `test_metrics_payload_satisfies_dashboard_contract`.
 
 | Component | Platform | URL |
 |---|---|---|
-| FastAPI | Render | LOL |
-| Streamlit | Streamlit Cloud | LOL |
+| FastAPI | Render | https://seml2-group173.onrender.com/docs#/ |
+| FastAPI | Render | https://seml2-group173.onrender.com/docs#/ |
+| Streamlit | Streamlit Cloud | https://health-insurance-cross-sell-prediction-2.streamlit.app/ |
 
 The Streamlit app calls the deployed API rather than importing `src/` directly,
 so the API must be redeployed before the dashboard reflects code changes.
