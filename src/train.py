@@ -155,8 +155,18 @@ class ModelTrainer:
         logger.info("Small-batch overfit probe on %d rows: accuracy=%.4f", n, accuracy)
         return accuracy
 
-    def save(self, metrics: dict = None) -> None:
-        """Persist the model, the feature order and the metrics."""
+    def save(
+        self,
+        metrics: dict = None,
+        train_samples: int = None,
+        test_samples: int = None,
+    ) -> None:
+        """Persist the model, the feature order and the metrics.
+
+        train_samples/test_samples are included because the Streamlit
+        dashboard displays them. Dropping a key from this payload silently
+        breaks that page, so treat metrics.json as a published contract.
+        """
         MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
         joblib.dump(self.model, MODEL_PATH)
         joblib.dump(self.feature_names, FEATURE_NAMES_PATH)
@@ -169,6 +179,8 @@ class ModelTrainer:
                     "model": "XGBoost",
                     "dataset": "Health Insurance Cross Sell",
                     "features": self.feature_names,
+                    "train_samples": int(train_samples) if train_samples is not None else None,
+                    "test_samples": int(test_samples) if test_samples is not None else None,
                 }
             )
             with open(METRICS_PATH, "w") as handle:
@@ -190,7 +202,7 @@ def run_training() -> dict:
     trainer.fit(X_train, y_train, eval_set=[(X_test, y_test)])
 
     metrics = trainer.evaluate(X_test, y_test)
-    trainer.save(metrics=metrics)
+    trainer.save(metrics=metrics, train_samples=len(X_train), test_samples=len(X_test))
 
     logger.info("=== Training pipeline finished ===")
     return metrics

@@ -12,7 +12,7 @@ input the model had never been trained on. Literal rejects it at the edge
 with a 422 and the malformed value never reaches the model.
 """
 
-from typing import List, Literal
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -45,12 +45,6 @@ class HealthResponse(BaseModel):
     status: str
     model_loaded: bool
     model_version: str
-
-
-class BatchPredictionResponse(BaseModel):
-    rows_scored: int
-    interested_count: int
-    results: List[dict]
 
 
 class ErrorResponse(BaseModel):

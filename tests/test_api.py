@@ -35,6 +35,28 @@ def test_metrics_endpoint_returns_recorded_metrics(client):
     assert {"accuracy", "roc_auc", "threshold"} <= set(response.json())
 
 
+def test_metrics_payload_satisfies_dashboard_contract(client):
+    """Regression test.
+
+    streamlit/pages/metrics.py indexes these keys directly, so removing any
+    one of them crashes the dashboard with a KeyError rather than failing a
+    test. metrics.json is a published contract, not an internal file.
+    """
+    required = {
+        "model",
+        "dataset",
+        "train_samples",
+        "test_samples",
+        "accuracy",
+        "precision",
+        "recall",
+        "f1_score",
+        "roc_auc",
+        "confusion_matrix",
+    }
+    assert required <= set(client.get("/metrics").json())
+
+
 # ----------------------------------------------------------
 # Happy path
 # ----------------------------------------------------------
@@ -91,7 +113,11 @@ def test_batch_predict_scores_uploaded_csv(client, raw_dataframe):
         files={"file": ("customers.csv", io.BytesIO(csv_bytes), "text/csv")},
     )
     assert response.status_code == 200
-    assert response.json()["rows_scored"] == 20
+
+    body = response.json()
+    assert isinstance(body, list), "Streamlit passes this straight to st.dataframe()"
+    assert len(body) == 20
+    assert response.headers["X-Rows-Scored"] == "20"
 
 
 def test_batch_predict_rejects_non_csv_upload(client):

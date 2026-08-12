@@ -40,5 +40,7 @@
     "Premium_Vintage",
     "License_Insured",
     "Age_Premium"
-  ]
+  ],
+  "train_samples": 342998,
+  "test_samples": 38111
 }

@@ -13,12 +13,12 @@ API design decisions (Objective 1, Req. 5):
 """
 
 import json
+from typing import List
 
 import pandas as pd
-from fastapi import APIRouter, File, UploadFile, status
+from fastapi import APIRouter, File, Response, UploadFile, status
 
 from api.schemas import (
-    BatchPredictionResponse,
     ErrorResponse,
     HealthResponse,
     PredictionRequest,
@@ -110,15 +110,23 @@ def predict(request: PredictionRequest):
 
 @router.post(
     "/batch-predict",
-    response_model=BatchPredictionResponse,
+    response_model=List[dict],
     responses={
         status.HTTP_413_REQUEST_ENTITY_TOO_LARGE: {"model": ErrorResponse},
         status.HTTP_422_UNPROCESSABLE_ENTITY: {"model": ErrorResponse},
     },
     tags=["inference"],
 )
-async def batch_predict(file: UploadFile = File(...)):
-    """Score a CSV of customer records."""
+async def batch_predict(response: Response, file: UploadFile = File(...)):
+    """Score a CSV of customer records.
+
+    Returns a JSON array of records, one per input row, so the response can
+    be rendered directly by a dataframe consumer. Summary counts are exposed
+    as X-Rows-Scored and X-Interested-Count headers rather than wrapped
+    around the array: changing the body shape would silently break the
+    Streamlit dashboard, which passes this response straight to
+    st.dataframe().
+    """
     if predictor is None:
         raise ModelNotFoundError("No model is loaded")
 
@@ -140,8 +148,8 @@ async def batch_predict(file: UploadFile = File(...)):
         raise DataValidationError(f"Batch exceeds the {MAX_BATCH_ROWS}-row limit")
 
     result = predictor.predict_batch(df)
-    return BatchPredictionResponse(
-        rows_scored=len(result),
-        interested_count=int((result["Prediction"] == 1).sum()),
-        results=result.to_dict(orient="records"),
-    )
+
+    response.headers["X-Rows-Scored"] = str(len(result))
+    response.headers["X-Interested-Count"] = str(int((result["Prediction"] == 1).sum()))
+
+    return result.to_dict(orient="records")
