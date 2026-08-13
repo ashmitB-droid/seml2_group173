@@ -227,7 +227,6 @@ Test: `test_metrics_payload_satisfies_dashboard_contract`.
 | Component | Platform | URL |
 |---|---|---|
 | FastAPI | Render | https://seml2-group173.onrender.com/docs#/ |
-| FastAPI | Render | https://seml2-group173.onrender.com/docs#/ |
 | Streamlit | Streamlit Cloud | https://health-insurance-cross-sell-prediction-2.streamlit.app/ |
 
 The Streamlit app calls the deployed API rather than importing `src/` directly,
@@ -244,9 +243,9 @@ quiet period may take 30–60 seconds.
 
 Group No: 173
 
-| Sl. No | BITS ID | Name | Contribution | % |
+| Sl. No | BITS ID | Name | Contribution (Qualitative) | % |
 |---|---|---|---|---|
-| 1 | 2025AA05957 | Abhishek | | 100 |
-| 2 | 2025AA05729 | Ashmit Bhandari | | 100 |
-| 3 | 2025AA05478 | Rishabh Jain | | 100 |
-| 4 | 2025AB05319 | Udit Sharma | | 100 |
+| 1 | 2025AA05957 | Abhishek | Modular OOP / functional design | 100 |
+| 2 | 2025AA05729 | Ashmit Bhandari | Two or more test types/Formatting and linting | 100 |
+| 3 | 2025AA05478 | Rishabh Jain | Error handling and logging | 100 |
+| 4 | 2025AB05319 | Udit Sharma | REST API / Research vs production code | 100 |

@@ -2,7 +2,7 @@
 Total issues: 0
 
 === black --check (AFTER) ===
-All done! ✨ 🍰 ✨
+All done! 
 21 files would be left unchanged.
 
 === isort --check-only (AFTER) ===
