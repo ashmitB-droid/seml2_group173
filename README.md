@@ -7,6 +7,19 @@ and architecture from Assignment I are in the main `README.md`.
 
 ---
 
+## Group details
+
+Group No: 173
+
+| Sl. No | BITS ID | Name | Contribution (Qualitative) | % |
+|---|---|---|---|---|
+| 1 | 2025AA05957 | Abhishek | Modular OOP / functional design | 100 |
+| 2 | 2025AA05729 | Ashmit Bhandari | Two or more test types/Formatting and linting | 100 |
+| 3 | 2025AA05478 | Rishabh Jain | Error handling and logging | 100 |
+| 4 | 2025AB05319 | Udit Sharma | REST API / Research vs production code | 100 |
+
+---
+
 ## Quick start
 
 ```bash
@@ -238,14 +251,3 @@ quiet period may take 30–60 seconds.
 `requirements-dev.txt` so deployments stay lean.
 
 ---
-
-## Group details
-
-Group No: 173
-
-| Sl. No | BITS ID | Name | Contribution (Qualitative) | % |
-|---|---|---|---|---|
-| 1 | 2025AA05957 | Abhishek | Modular OOP / functional design | 100 |
-| 2 | 2025AA05729 | Ashmit Bhandari | Two or more test types/Formatting and linting | 100 |
-| 3 | 2025AA05478 | Rishabh Jain | Error handling and logging | 100 |
-| 4 | 2025AB05319 | Udit Sharma | REST API / Research vs production code | 100 |
